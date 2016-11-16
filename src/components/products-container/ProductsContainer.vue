@@ -1,37 +1,38 @@
 <template>
-  <article class="product">
-    <header>
-      header
-    </header>
-    <img src= "http://i62.tinypic.com/wb8nz9.jpg">
-    <p class="description">
-      {{productTitle}}
-    </p>
-
-    <footer class="actions">
-      <button @click="addToCart">add to cart</button>
-    </footer>
-
-    <aside class="price">
-      price
-    </aside>
-
-  </article>
+  <ul>
+    <products :products='products'></products>
+  </ul>
 </template>
+
 
 <script>
   import { eventBus } from '../../main'
+  import Products from './Products.vue'
+
   export default {
     data: function () {
       return {
-        productImg: "http://i62.tinypic.com/wb8nz9.jpg",
-        productTitle: "ice cream"
+        products:''
+        // productImg: "dsdgsd",
+        // productTitle: "not cool"
       }
     },
     methods: {
       addToCart(){
         eventBus.$emit('addedToCart')
       }
+    },
+    components: {
+      'Products': Products
+    },
+    created() {
+      this.$http.get('http://localhost:3000/db')
+      .then(response => {
+        return response.json()
+      })
+      .then(data => {
+          this.products = data.products
+      })
     }
   }
 </script>
