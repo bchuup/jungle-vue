@@ -2,8 +2,7 @@
     <div class="container">
       <app-navbar></app-navbar>
       <hr>
-      <h1 class="product-landing-page">PRODUCTS</h1>
-      <app-product-container></app-product-container>
+      <router-view></router-view>
     </div>
 </template>
 

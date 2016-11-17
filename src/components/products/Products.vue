@@ -1,13 +1,18 @@
 <template>
   <article class="product">
     <img :src="product.image">
+    <header>
+      <h2>{{ product.productTitle }}</h2>
     </header>
-    <img :src= "productImg">
     <p class="description">
+      {{ product.description }}
     </p>
 
     <footer class="actions">
-      <button @click="addToCart">add to cart</button>
+      <button class="btn btn-primary"@click="addToCart">add to cart</button>
+      <router-link to="1">
+        <button class="btn btn-primary">Details: {{ product.id }}</button>
+      </router-link>
     </footer>
 
     <aside class="price">

@@ -1,8 +1,11 @@
 <template>
-  <ul>
-    <products :product='product' v-for="product in products">
-    </products>
-  </ul>
+  <div class="product-landing-page">
+    <h1>PRODUCTS</h1>
+    <ul class="list-group">
+      <products class="list-item" :product='product' v-for="product in products">
+      </products>
+    </ul>
+  </div>
 </template>
 
 <script>
@@ -12,7 +15,7 @@
   export default {
     data: function () {
       return {
-        products:''
+        products: ''
       }
     },
     methods: {
@@ -24,12 +27,12 @@
       'Products': Products
     },
     created() {
-      this.$http.get('http://localhost:3004/db')
+      this.$http.get('')
       .then(response => {
         return response.json()
       })
       .then(data => {
-          this.products = data.products
+          this.products = data
       })
     }
   }

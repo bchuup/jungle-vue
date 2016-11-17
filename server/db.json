@@ -1,19 +1,22 @@
 {
   "products":[
     {
+      "id": 1,
       "image": ["http://i62.tinypic.com/wb8nz9.jpg"],
-      "productTitle": {"title": "ice cream"},
-      "description": ["I AM AN ICE CREAM LICK ME"]
+      "productTitle": "ice cream",
+      "description": "I AM AN ICE CREAM LICK ME"
     },
     {
+      "id": 2,
       "image": ["https://mcdonalds.com.au/sites/mcdonalds.com.au/files/hero_pdt_fries_medium.png"],
-      "productTitle": {"title": "Fries"},
-      "description": ["I AM CRISPING"]
+      "productTitle": "Fries",
+      "description": "I AM CRISPY"
     },
     {
+      "id": 3,
       "image": ["http://awcoupon.ca/assets/images/sriracha/sriracha_burger.png"],
-      "productTitle": {"title": "Burger"},
-      "description": ["LET IT GOOOO"]
+      "productTitle": "Burger",
+      "description": "LET IT GOOOO"
     }
   ]
 }
