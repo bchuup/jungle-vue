@@ -14,7 +14,7 @@ const router = new VueRouter({
   routes
 })
 
-Vue.http.options.root = "http://localhost:3004/products"
+Vue.http.options.root = "http://localhost:3004"
 
 Vue.component('app-navbar', Navbar)
 Vue.component('app-product-container', ProductsContainer)

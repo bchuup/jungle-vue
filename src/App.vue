@@ -9,7 +9,6 @@
 <script>
 </script>
 
-
 <style>
   .product-landing-page {
       margin-top: 60px;

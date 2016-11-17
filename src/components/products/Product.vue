@@ -2,7 +2,7 @@
   <article class="product">
     <img :src="product.image">
     <header>
-      <h2>{{ product.productTitle }}</h2>
+      <h2>{{ product.title }}</h2>
     </header>
     <p class="description">
       {{ product.description }}
@@ -10,13 +10,15 @@
 
     <footer class="actions">
       <button class="btn btn-primary"@click="addToCart">add to cart</button>
-      <router-link to="1">
+      <router-link
+        :to="{ path: '/'+product.id }"
+        v-bind:product="product"
+      >
         <button class="btn btn-primary">Details: {{ product.id }}</button>
       </router-link>
     </footer>
 
     <aside class="price">
-      price
     </aside>
 
   </article>

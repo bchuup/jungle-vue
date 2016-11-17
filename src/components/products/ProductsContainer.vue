@@ -2,15 +2,19 @@
   <div class="product-landing-page">
     <h1>PRODUCTS</h1>
     <ul class="list-group">
-      <products class="list-item" :product='product' v-for="product in products">
-      </products>
+      <product
+        class="list-group-item"
+        :product='product'
+        v-for="product in products"
+      >
+      </product>
     </ul>
   </div>
 </template>
 
 <script>
   import { eventBus } from '../../main'
-  import Products from './Products.vue'
+  import Product from './Product.vue'
 
   export default {
     data: function () {
@@ -24,7 +28,7 @@
       }
     },
     components: {
-      'Products': Products
+      'Product': Product
     },
     created() {
       this.$http.get('')
