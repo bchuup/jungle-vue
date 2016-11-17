@@ -6,13 +6,13 @@
       "description": ["I AM AN ICE CREAM LICK ME"]
     },
     {
-      "image": ["http://i62.tinypic.com/wb8nz9.jpg"],
-      "productTitle": {"title": "ice cream"},
-      "description": ["I AM MELTING"]
+      "image": ["https://mcdonalds.com.au/sites/mcdonalds.com.au/files/hero_pdt_fries_medium.png"],
+      "productTitle": {"title": "Fries"},
+      "description": ["I AM CRISPING"]
     },
     {
-      "image": ["http://i62.tinypic.com/wb8nz9.jpg"],
-      "productTitle": {"title": "ice cream"},
+      "image": ["http://awcoupon.ca/assets/images/sriracha/sriracha_burger.png"],
+      "productTitle": {"title": "Burger"},
       "description": ["LET IT GOOOO"]
     }
   ]

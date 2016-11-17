@@ -1,9 +1,9 @@
 <template>
   <ul>
-    <products :products='products'></products>
+    <products :product='product' v-for="product in products">
+    </products>
   </ul>
 </template>
-
 
 <script>
   import { eventBus } from '../../main'
@@ -13,8 +13,6 @@
     data: function () {
       return {
         products:''
-        // productImg: "dsdgsd",
-        // productTitle: "not cool"
       }
     },
     methods: {
@@ -26,7 +24,7 @@
       'Products': Products
     },
     created() {
-      this.$http.get('http://localhost:3000/db')
+      this.$http.get('http://localhost:3004/db')
       .then(response => {
         return response.json()
       })

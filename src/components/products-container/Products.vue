@@ -1,12 +1,9 @@
-<template v-for="a in products" :products="a">
+<template>
   <article class="product">
-    <header>
-      header
-      {{products}}
+    <img :src="product.image">
     </header>
     <img :src= "productImg">
     <p class="description">
-      {{product}}
     </p>
 
     <footer class="actions">
@@ -24,14 +21,9 @@
 
 <script>
   import { eventBus } from '../../main'
+
   export default {
-    props: ['products'],
-    // data: function () {
-    //   return {
-    //     productImg: "dsdgsd",
-    //     productTitle: "not cool"
-    //   }
-    // },
+    props: ['product'],
     methods: {
       addToCart(){
         eventBus.$emit('addedToCart')
