@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueResource from 'vue-resource'
 import VueRouter from 'vue-router'
-import VueMaterialComponents from 'vue-material-components'
+import VueMaterial from 'vue-material'
 
 import App from './App.vue'
 
@@ -12,7 +12,12 @@ import ProductsContainer from './components/products/ProductsContainer.vue'
 
 Vue.use(VueResource)
 Vue.use(VueRouter)
-Vue.use(VueMaterialComponents)
+Vue.use(VueMaterial)
+
+Vue.material.theme.register('default', {
+  primary: 'cyan',
+  accent: 'pink'
+})
 
 const router = new VueRouter({
   routes
@@ -33,7 +38,6 @@ export const eventBus = new Vue({
 
 new Vue({
   el: '#app',
-  template: '<app></app>',
   router,
   render: h => h(App)
 })

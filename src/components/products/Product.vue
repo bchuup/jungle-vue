@@ -15,7 +15,7 @@
         :product="product"
       >
         <button class="btn btn-primary">
-          Details: {{ product._id }}
+          Details
         </button>
       </router-link>
     </footer>
@@ -44,15 +44,17 @@
 
 <style>
   .product {
-      margin-top: 40px;
+      margin: 50px;
       max-width: 260px;
       position:  relative;
       border:        1px solid #ccc;
       border-radius: 5px;
-      padding:       15px;
-      padding-bottom: 80px;
+      padding:       20px;
   }
   img {
     max-width: 100%;
   }
+  .row .col {
+    padding: 0px;
+}
 </style>

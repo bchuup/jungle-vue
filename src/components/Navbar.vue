@@ -10,15 +10,16 @@
         </button>
         <a class="navbar-brand" href="/">Jungle</a>
       </div>
-      <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-              Categories
-              <span class="caret"></span>
-            </a>
-          </li>
-        </ul>
+      <div>
+<md-menu>
+  <md-button md-menu-trigger>Bottom Right</md-button>
+
+  <md-menu-content>
+    <md-menu-item>My Item 1</md-menu-item>
+    <md-menu-item>My Item 2</md-menu-item>
+    <md-menu-item>My Item 3</md-menu-item>
+  </md-menu-content>
+</md-menu>
         <ul class="nav navbar-nav navbar-right">
          <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
