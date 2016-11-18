@@ -36,7 +36,9 @@
         return response.json()
       })
       .then(data => {
+          console.log(data)
           this.products = data
+          console.log(this.products[0])
       })
     }
   }

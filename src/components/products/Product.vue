@@ -1,20 +1,22 @@
 <template>
   <article class="product">
-    <img :src="product.image">
+    <img :src="product.thumbnail_url">
     <header>
       <h2>{{ product.title }}</h2>
     </header>
     <p class="description">
-      {{ product.description }}
+      {{ product.content }}
     </p>
 
     <footer class="actions">
       <button class="btn btn-primary"@click="addToCart">add to cart</button>
       <router-link
-        :to="{ path: '/'+product.id }"
-        v-bind:product="product"
+        :to="{ path: '/'+product._id }"
+        :product="product"
       >
-        <button class="btn btn-primary">Details: {{ product.id }}</button>
+        <button class="btn btn-primary">
+          Details: {{ product._id }}
+        </button>
       </router-link>
     </footer>
 

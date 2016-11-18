@@ -12,12 +12,12 @@
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-          <li class="dropdown">
+          <md-dropdown title="Dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
               Categories
               <span class="caret"></span>
             </a>
-          </li>
+          </md-dropdown>
         </ul>
         <ul class="nav navbar-nav navbar-right">
          <li class="dropdown">

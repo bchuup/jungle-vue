@@ -6,16 +6,16 @@
   <article class="product-detail">
     <div class="row">
       <div class="col-sm-4">
-        <img :src="product.image">
+        <img :src="product.thumbnail_url">
       </div>
       <div class="col-sm-8">
         <dl class="dl-horizontal">
           <dt>Product ID:</dt>
           <dd>{{ $route.params.id }}</dd>
           <dt>Name:</dt>
-          <dd>{{ product.title }}</dd>
+          <dd><strong>{{ product.title }}</strong></dd>
           <dt>Description:</dt>
-          <dd>{{ product.description }}</dd>
+          <dd>{{ product.content }}</dd>
           <dt>Quantity</dt>
           <dd>6</dd>
           <dt>Price</dt>
@@ -24,7 +24,7 @@
         <dl class="dl-horizontal">
           <dt>Reviews</dt>
             <dd class="form-group">
-              <input type="text" class="form-control" v-model="review">
+              <input type="text" class="form-control" v-model="review.content">
               <button class="btn btn-primary" @click="submit">Submit Review</button>
             </dd>
               <br><dd><strong>User</strong></dd>
@@ -45,32 +45,40 @@
     data: function() {
       return {
         product: '',
-        review: '',
+        review: {
+          'title': "Health Matters for Devs",
+          'thumbnail_url': 'https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-456874.jpg',
+          'content': '',
+          'tags': ["testing 123", "yet another test"]
+
+        },
         resource: {}
       }
     },
     methods: {
       submit() {
-        console.log(this.review)
-        this.$http.post('reviews', {review: this.review})
-          .then(res => {
-            console.log(res)
-          }), err => {
-            console.log(err)
-          }
-        // this.resource.save({}, this.review)
+        console.log(this.review.content)
+        // this.$http.post('', this.review)
+        //   .then(res => {
+        //     console.log(res)
+        //   }), err => {
+        //     console.log(err)
+        //   }
+        this.resource.save({}, this.review)
         this.review = ''
       }
     },
     created() {
-      this.$http.get(`products/${this.$route.params.id}`)
+      this.$http.get(`${this.$route.params.id }`)
       .then(response => {
         return response.json()
       })
       .then(data => {
         this.product = data
+        console.log(this.product)
       })
-      this.resource = this.$resource(`${this.$route.params.id}/review`);
+      this.resource = this.$resource('');
+
     }
   }
 </script>
