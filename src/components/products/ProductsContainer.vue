@@ -1,14 +1,15 @@
 <template>
   <div class="product-landing-page">
     <h1>PRODUCTS</h1>
-    <ul class="list-group">
-      <product
-        class="list-group-item"
-        :product='product'
-        v-for="product in products"
-      >
-      </product>
-    </ul>
+    <section class="row">
+      <div class="col s12 m4 lg">
+        <product
+          :product='product'
+          v-for="product in products"
+        >
+        </product>
+      </div>
+    </section>
   </div>
 </template>
 
