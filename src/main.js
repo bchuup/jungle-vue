@@ -10,6 +10,7 @@ import { routes } from './routes'
 
 import Navbar from './components/Navbar.vue'
 import ProductsContainer from './components/products/ProductsContainer.vue'
+import NewProduct from './components/products/NewProduct.vue'
 
 Vue.use(VueResource)
 Vue.use(VueRouter)
@@ -23,6 +24,7 @@ Vue.http.options.root = "http://localhost:9000/api/articles"
 
 Vue.component('app-navbar', Navbar)
 Vue.component('app-product-container', ProductsContainer)
+Vue.component('app-new-product', NewProduct)
 
 export const eventBus = new Vue({
   methods: {

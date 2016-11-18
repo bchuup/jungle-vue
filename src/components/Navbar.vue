@@ -12,21 +12,25 @@
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-          <!-- <md-dropdown title="Dropdown"> -->
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
               Categories
               <span class="caret"></span>
             </a>
-          <!-- </md-dropdown> -->
         </ul>
         <ul class="nav navbar-nav navbar-right">
-         <li class="dropdown">
+        <li>
+          <router-link
+            :to="{ name: 'newProduct'}">
+            <button class="btn btn-primary">
+              + New Product
+            </button>
+          </router-link>
+        </li>
+          <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-
               <span class="text-danger">Admin</span>
               <span class="caret"></span>
             </a>
-
           </li>
           <li>
             My Cart ({{cart}})
