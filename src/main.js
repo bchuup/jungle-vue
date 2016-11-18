@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import VueResource from 'vue-resource'
 import VueRouter from 'vue-router'
-import VueMaterialComponents from 'vue-material-components'
+// import VueMaterialComponents from 'vue-material-components'
 import App from './App.vue'
-import 'vue-material-components/assets/css/materialize.min.css'
+// import 'vue-material-components/assets/css/materialize.min.css'
 
 
 import { routes } from './routes'
@@ -13,7 +13,7 @@ import ProductsContainer from './components/products/ProductsContainer.vue'
 
 Vue.use(VueResource)
 Vue.use(VueRouter)
-Vue.use(VueMaterialComponents)
+// Vue.use(VueMaterialComponents)
 
 const router = new VueRouter({
   routes
