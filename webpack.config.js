@@ -33,7 +33,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'vue$': 'vue/dist/vue'
+      'vue$': 'vue/dist/vue.js'
     }
   },
   devServer: {

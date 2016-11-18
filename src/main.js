@@ -1,10 +1,9 @@
 import Vue from 'vue'
 import VueResource from 'vue-resource'
 import VueRouter from 'vue-router'
-// import VueMaterialComponents from 'vue-material-components'
-import App from './App.vue'
-// import 'vue-material-components/assets/css/materialize.min.css'
+import VueMaterialComponents from 'vue-material-components'
 
+import App from './App.vue'
 
 import { routes } from './routes'
 
@@ -13,7 +12,7 @@ import ProductsContainer from './components/products/ProductsContainer.vue'
 
 Vue.use(VueResource)
 Vue.use(VueRouter)
-// Vue.use(VueMaterialComponents)
+Vue.use(VueMaterialComponents)
 
 const router = new VueRouter({
   routes
@@ -34,6 +33,7 @@ export const eventBus = new Vue({
 
 new Vue({
   el: '#app',
+  template: '<app></app>',
   router,
   render: h => h(App)
 })
