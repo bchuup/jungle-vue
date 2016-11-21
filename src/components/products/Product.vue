@@ -11,7 +11,7 @@
     <footer class="actions">
       <button class="btn btn-primary"@click="addToCart">add to cart</button>
       <router-link
-        :to="{ path: '/'+product._id }"
+        :to="{ name: 'productDetails', params: { id: product._id} }"
         :product="product"
       >
         <button class="btn btn-primary">
