@@ -15,7 +15,7 @@
         :product="product"
       >
         <button class="btn btn-primary">
-          Details: {{ product._id }}
+          Details
         </button>
       </router-link>
     </footer>
