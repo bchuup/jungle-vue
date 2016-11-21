@@ -17,7 +17,7 @@
           type="Picture"
           class="form-control"
           placeholder="Picture"
-          v-model="product.picture"
+          v-model="product.thumbnail_url"
         >
       </div>
       <div class="form-group">
@@ -35,7 +35,6 @@
           type="Tags"
           class="form-control"
           placeholder="Tags"
-          v-model="product.tags"
         >
       </div>
       <button
@@ -54,17 +53,18 @@
     data() {
       return {
         product: {
-          title: "",
-          picture: "",
-          content: "",
-          tags: ""
-        }
+          'title': "",
+          'thumbnail_url': "",
+          'content': "",
+          'tags': ["testing 123", "yet another test"]
+        },
+        resource: {}
       }
     },
     methods: {
       submit() {
         console.log(this.product)
-        this.resource.save({}, this.review)
+        this.resource.save({}, this.product)
         this.product = {}
       }
     },

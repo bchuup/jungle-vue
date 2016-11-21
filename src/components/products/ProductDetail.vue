@@ -50,14 +50,13 @@
           'thumbnail_url': 'https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-456874.jpg',
           'content': '',
           'tags': ["testing 123", "yet another test"]
-
         },
         resource: {}
       }
     },
     methods: {
       submit() {
-        console.log(this.review.content)
+        console.log(this.review)
         // this.$http.post('', this.review)
         //   .then(res => {
         //     console.log(res)
@@ -75,7 +74,7 @@
       })
       .then(data => {
         this.product = data
-        console.log(this.product)
+        // console.log(this.product)
       })
       this.resource = this.$resource('');
 
