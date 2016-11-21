@@ -2,13 +2,11 @@
   <div class="product-landing-page">
     <h1>PRODUCTS</h1>
     <section class="row">
-      <div class="col s12 m4 lg">
         <product
           :product='product'
           v-for="product in products"
         >
         </product>
-      </div>
     </section>
   </div>
 </template>
@@ -37,9 +35,7 @@
         return response.json()
       })
       .then(data => {
-          console.log(data)
           this.products = data
-          console.log(this.products[0])
       })
     }
   }

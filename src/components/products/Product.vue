@@ -1,5 +1,5 @@
 <template>
-  <article class="product">
+  <div class="product col s12 m4 lg">
     <img :src="product.thumbnail_url">
     <header>
       <h2>{{ product.title }}</h2>
@@ -22,8 +22,7 @@
 
     <aside class="price">
     </aside>
-
-  </article>
+  </div>
 </template>
 
 
